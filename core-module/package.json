@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@share-package/common": "file:./libs/share-package-0.0.2.tgz",
+    "@share-package/common": "file:./libs/share-package-0.0.3.tgz",
     "vue": "^3.4.31"
   },
   "devDependencies": {

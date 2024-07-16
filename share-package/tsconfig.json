@@ -16,6 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
     "declaration": true,
     "outDir": "dist",
     "declarationDir": "dist",
