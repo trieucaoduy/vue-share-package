@@ -3,6 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/share-package.umd.js",
+  "module": "./dist/share-package.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/share-package.es.js",
+      "require": "./dist/share-package.umd.js"
+    }
+  },
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -11,9 +23,12 @@
   "dependencies": {
     "@primevue/themes": "^4.0.0",
     "primevue": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "vite-plugin-dts": "^3.9.1",
     "vue": "^3.4.31"
   },
   "devDependencies": {
+    "@types/node": "^20.14.10",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
