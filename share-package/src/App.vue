@@ -1,30 +1,15 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import PkgSelect from './components/atoms/PkgSelect.vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  components: { PkgSelect },
-  setup: () => {
-    const selected = ref();
-    const cities = ref([
-      { name: 'New York', code: 'NY' },
-      { name: 'Rome', code: 'RM' },
-      { name: 'London', code: 'LDN' },
-      { name: 'Istanbul', code: 'IST' },
-      { name: 'Paris', code: 'PRS' }
-    ]);
-
-    return { selected, cities }
-  }
-})
+  name: 'App',
+  setup() {
+    return {};
+  },
+});
 </script>
 
 <template>
-  <PkgSelect
-    :modelValue="selected"
-    :listOptions="cities"
-    :optionLabel="'name'"
-  />
 </template>
 
 <style scoped>

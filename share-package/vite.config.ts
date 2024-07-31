@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import typescript2 from 'rollup-plugin-typescript2';
 import dts from "vite-plugin-dts";
+import Components from 'unplugin-vue-components/vite';
+import {PrimeVueResolver} from '@primevue/auto-import-resolver';
 
 import vue from "@vitejs/plugin-vue";
 
@@ -9,6 +11,11 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   plugins: [
     vue(),
+    Components({
+      resolvers: [
+        PrimeVueResolver()
+      ]
+    }),
     dts({
       insertTypesEntry: true,
     }),
